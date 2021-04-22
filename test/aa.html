@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--21861091_이승민-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>배경이미지</title>
+        <script src="http://code.jquery.com/jquery-latest.js">
+
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans CJK KR";
+            
+        }
+
+        body {
+            width: 100%;
+            
+            background-color: aqua;
+        }
+
+        #top {
+            width: 70px;
+            height: 70px;
+            background-color: #11255a;
+            border-radius: 90px;
+            text-align: center;
+            line-height: 65px;
+            position: fixed;
+            left: 85%;
+            top: 85%;
+            z-index: 999;
+            color: #fff;
+            box-shadow: 0px 0px 4px #fff;
+        }
+        #top:hover{
+            line-height: 75px;
+            color:#fff;
+            transition: 0.3s;
+            background-color: #11255a;
+            box-shadow: 2px 2px 3px #fff;
+            width: 78px;
+            height: 78px;
+        }
+
+        header {
+            width: 100%;
+            height: 500px;
+            background-image: url(img/iubg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+            overflow: hidden;
+            z-index: -999;
+        }
+
+
+        #logo {
+            position: absolute;
+            left: 150px;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+        #contents {
+            width: 100%;
+            height: 1004px;
+            background-color: #a6c9f8;
+            position: absolute;
+            margin-top: 500px;
+        }
+
+        section {
+            width: 500px;
+            background-color: ;
+            height: 200px;
+            text-align: center;
+            margin: auto;
+            line-height: 200px;
+            margin-top: 150px;
+
+        }
+
+        section>h1 {
+            font-size: 30px;
+        }
+
+        .nav {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            
+        
+        }
+        .nav p:hover{
+            transition: 0.2s;
+           color: #a0bfea;
+        }
+        #nav1 {
+            position: absolute;
+            left: 780px;
+            font-weight: 700;
+        }
+
+        #top_nav{
+            
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            z-index: -5;
+            opacity: 0.9;
+            z-index: 9999;
+            position: fixed;
+            overflow: hidden;
+        }
+
+    
+        .contents_in {
+            width: 1140px;
+            height: 200px;
+            margin-left: 150px;
+            margin-top: 70px;
+            font-size: 16px;
+
+        }
+
+        .porfile {
+            position: absolute;
+
+        }
+
+        #contents_text {
+            width: 800px;
+            top: 80px;
+            position: absolute;
+            line-height: 30px;
+            left: 500px;
+
+        }
+        #contents_text>img{
+            width: 50px;
+        }
+        #sns {
+            width: 50px;
+            ;
+        }
+
+        .bold {
+            font-weight: 600;
+        }
+
+        #space {
+            margin-left: 13px;
+        }
+
+        .gray {
+            color: gray;
+        }
+
+        .solid {
+            width: 1140px;
+            border-bottom: solid 1px;
+            position: absolute;
+            z-index: 20;
+            left: 150px;
+        }
+
+        .aimg {
+            width: 200px;
+            height: 200px;
+            margin: 11.7px;
+            overflow: hidden;
+        }
+        .aimg img{
+            width: 200px;
+            height: 200px;
+            
+        }
+        .aimg img:hover{
+            width: 220px;
+            height: 220px;
+            overflow: hidden;
+            transition: 0.2s
+            
+        }
+        #contents_text2 {
+            background-color:#fff;
+            width: 1140px;
+            top: 420px;
+            position: absolute;
+            text-align: center;
+            z-index: 9
+        }
+
+        .aphoto {
+            width: 223px;
+            height: 290px;
+            background-color: #fffffc;
+            display: inline-block;
+            overflow: hidden;
+            box-shadow: 1px 1px 2px gray ;
+        }
+
+        #group1 {
+            background-color: #fff;
+            width: 1140px;
+            height: 290px;
+
+        }
+        #group2 {
+            background-color: #fff;
+            width: 1140px;
+            height: 290px;
+            margin-top: 10px;
+
+        }
+        #group3 {
+            background-color: #fff;
+            width: 1140px;
+            height: 290px;
+            margin-top: 10px;
+        }
+        #group4 {
+            background-color: #fff;
+            width: 1140px;
+            height: 290px;
+            margin-top: 10px;
+        }
+        #photos{
+            top: 2140px;
+            position: absolute;
+            background-color: #fffffc;
+            width: 100%;
+            height: 800px;
+        }
+        
+        #photo_in{
+            
+          
+            width: 1140px;
+            height: 620px;
+            margin: auto;
+            margin-top: 70px;
+            font-size: 16px;
+        }
+        
+        #imgtt{
+            position: absolute;
+            margin-top: 30px;
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            
+        }
+        #hoho{
+            top: 147px;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            background-color: #000;
+            z-index: 70;
+            opacity: 0%;
+            text-align: center;
+           
+        }
+        #hoho h1{
+            margin-top: 220px;
+        }
+        #hoho:hover{
+            color: #fff;
+            opacity: 80%;
+            transition: 0.3s;
+            z-index: 999;
+            background-color: #000;
+            
+        }
+     
+        
+        #bg{
+            top: 1000px;
+            position: absolute;
+            width: 100%;
+            height: 800px;
+            background-color: #fffffc;
+    
+        }
+        #tbox{
+            
+            position: absolute;
+            width: 594px;
+            height: 500px;
+            
+            left: 700px;
+            top: 147px;
+            text-align: center;
+            line-height: 50px;
+        }
+        #tbox h1{
+            margin-top: 180px;
+        }
+        #tbox p{
+            background-color: #000;
+            margin-top: 10px;
+            margin-left: 200px;
+            width: 200px;
+            border: solid 3px;
+            color: #fff;
+            height: 55px;
+        }
+        #tbox p:hover{
+            font-size: 13pt;
+                 width: 210px;
+                height: 60px;
+                margin-left: 195px;
+                line-height: 60px;
+            transition: 0.3s;
+        }
+        footer{
+            width: 100%;
+            height: 700px;
+            background-color: #11255a;
+            position: absolute;
+            top: 2940px;
+            text-align: center;
+             color: #fff;
+           
+        }
+        #title4{
+            margin-top: 50px;
+            position: absolute;
+        }
+        iframe{
+            width: 860px;
+            height: 484px;
+        }
+        #video{
+            
+            width: 860px;
+            height: 604px;
+            position: absolute;
+            left: 300px;
+            top: 60px;
+        }
+        
+        #ffot{
+            margin: auto;
+            width: 1140px;
+            height: 700px;
+        }
+        footer h1{margin-top: 20px}
+        footer p{margin-top: 9px}
+       #two{
+            width: 100%;
+            height: 1px;
+            position: absolute;
+             
+            top: 60vw;
+        
+        }
+        #three{
+            width: 100%;
+            height: 1px;
+            position: absolute;
+         
+            top: 103vw;
+
+        }
+        #four{
+            width: 100%;
+            height: 1px;
+            position: absolute;
+ 
+            top: 154vw;
+
+        }
+    
+        #six{
+            width: 100%;
+            height: 1px;
+            position: absolute;
+    
+            top: 210.5vw;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+      <div id="han1">
+  <div id="one"><span class="about"></span></div>
+  <div id="two"><span class="about"></span></div>
+  <div id="three"><span class="about"></span></div>
+  <div id="four"><span class="about"></span></div>
+
+  <div id="six"><span class="about"></span></div>
+    </div>
+       <a href="#" onclick="j_test(0)">
+        <div id="top">
+            <h3>top</h3>
+        </div>
+        </a>
+    
+    
+       <div id="top_nav">
+        <div id="logo">
+            <h1><a href="#" onclick="j_test(0)">HI U</a></h1>
+        </div>
+        <ul id="nav1">
+          
+          
+           <a href="#" onclick="j_test(1)">
+            <li class="nav">
+                <p>Proflie</p>
+            </li>
+            </a>
+            
+            <a href="#" onclick="j_test(2)">
+            <li class="nav">
+                <p>Album</p>
+            </li>
+            </a>
+            
+            <a href="#" onclick="j_test(3)">
+            <li class="nav">
+                <p>Photo</p>
+            </li>
+            </a>
+            <a href="#" onclick="j_test(4)">
+            <li class="nav">
+                <p>Video</p>
+            </li>
+            </a>
+        </ul>
+        
+        </div>
+    <header>
+        <section>
+            <h1>아이유(IU)</h1>
+        </section>
+    </header>
+    
+    
+    
+    
+    <div id="contents">
+     
+        <div class="contents_in">
+            <div class="porfile">
+                <h1>Profile</h1>
+            </div>
+            <div id="contents_text">
+                <p><span class="bold">아이유</span>(이지은,IU) <span class="gray">가수,텔런트</span></p>
+
+                <p>출생 <span id="space">1993 5월 16일</span></p>
+
+                <p><span class="bold">SNS</span></p>
+                <a href="https://twitter.com/_IUofficial" target="_blank"><img src="img/tw1.png" alt="" id="sns"></a>
+                <a href="https://www.facebook.com/iu.loen" target="_blank"><img src="img/fa1.png" alt="" id="sns"></a>
+                <a href="https://www.instagram.com/dlwlrma/" target="_blank"><img src="img/insta1.png" alt="" id="sns"></a>
+                <a href="https://www.youtube.com/c/dlwlrma" target="_blank"><img src="img/you1.png" alt="" id="sns"></a>
+
+            </div>
+        </div>
+        <div class="solid"></div>
+                 
+        <div class="contents_in">
+            <div class="porfile">
+                <h1>Album</h1>
+            </div>
+            <div id="contents_text2">
+                <div id="group1">
+                   <a href="index2.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                           <img src="img/1.jpg" alt="" >
+                       </div>
+                        <p>미니1집 '미아'</p>
+                        <p>09/23/2008</p>
+                    </div>
+                    </a>
+                    <a href="index3.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/2.jpg" alt="" >
+                        </div>
+                        <p>정규 1집 'Boo' </p>
+                        <p>04/23/2009 </p>
+                    </div>
+                    </a>
+                    <a href="index4.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/3.jpg" alt="" >
+                        </div>
+                        <p>미니 2집 'Marshmallow'</p>
+                        <p>11/12/2009</p>
+                    </div>
+                    </a>
+                    <a href="index5.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/4.jpg" alt="" >
+                        </div>
+                        <p>디지털 싱글 '잔소리'</p>
+                        <p>06/03/2010</p>
+                    </div>
+                    </a>
+                    <a href="index6.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/5.jpg" alt="" >
+                        </div>
+                        <p>미니 3집 '좋은날'</p>
+                        <p>12/09/2010</p>
+                    </div>
+                    </a>
+                </div>
+                
+                
+                <div id="group2">
+                   <a href="index7.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/6.jpeg" alt="" >
+                        </div>
+                        <p>미니 3집 '나만 몰랐던 이야기'</p>
+                        <p>02/17/2011</p>
+                    </div>
+                    </a>
+                     <a href="index8.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/7.jpg" alt="" >
+                        </div>
+                        <p>디지털 싱글 '얼음꽃'</p>
+                        <p>06/21/2011</p>
+                    </div>
+                    </a>
+                     <a href="index9.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/8.jpg" alt="">
+                        </div>
+                        <p>정규 2집 '너랑나'</p>
+                        <p>11/29/2011</p>
+                    </div>
+                    </a>
+                     <a href="index10.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/9.jpg" alt="" >
+                        </div>
+                        <p>맥시 싱글 '하루끝'</p>
+                        <p>05/11/2012</p>
+                    </div>
+                    </a>
+                     <a href="index11.html" target="_blank">
+                    <div class="aphoto">
+                       <div class="aimg">
+                        <img src="img/10.jpg" alt="" >
+                        </div>
+                        <p>정규 3집 '분홍신'</p>
+                        <p>10/08/2013</p>
+                    </div>
+                    </a>
+                </div>
+                
+                
+                <div id="group3">
+                 <a href="index12.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/11.jpg" alt="">
+                    </div>
+                   <p>정규 3집 '금요일에 만나요'</p>
+                   <p>2013.12.20</p>
+                    </div>
+                    </a>
+                    
+                     <a href="index13.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/12.jpg" alt="" >
+                    </div>
+                   <p>리메이크 1집 '너의 의미'</p>
+                   <p>2014.05.16</p>
+                    </div>
+                    </a>
+                     <a href="index14.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/13.jpg" alt="">
+                    </div>
+                   <p>디지털 싱글 '마음'</p>
+                   <p>2015.05.18</p>
+                    </div>
+                    </a>
+                     <a href="index15.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/14.jpg" alt="" >
+                    </div>
+                   <p>미니 4집 '스물셋'</p>
+                   <p>2015.10.23</p>
+                    </div>
+                    </a>
+                     <a href="index16.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/15.jpg" alt="" >
+                    </div>
+                   <p>정규 4집 'Palette'</p>
+                   <p>2017.04.21</p>
+                    </div>
+                    </a>
+                </div>
+                
+                
+                <div id="group4">
+                
+                 <a href="index17.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/16.jpg" alt="" >
+                    </div>
+                   <p>리메이크 2집 '가을아침'</p>
+                   <p>2017.09.22</p>
+                    </div>
+                    </a>
+                     <a href="index18.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/17.jpg" alt="">
+                    </div>
+                   <p>디지털 싱글 '삐삐'</p>
+                   <p>2018.10.10</p>
+                    </div>
+                    </a>
+                     <a href="index19.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/18.jpg" alt="">
+                    </div>
+                   <p>미니 5집 'Love poem'</p>
+                   <p>2019.11.18</p>
+                    </div>
+                    </a>
+                     <a href="index20.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/19.jpg" alt="">
+                    </div>
+                   <p>디지털 싱글 '에잇'</p>
+                   <p>2020.05.06</p>
+                    </div>
+                    </a>
+                     <a href="index21.html" target="_blank">
+                <div class="aphoto">
+                <div class="aimg">
+                <img src="img/20.jpg" alt="">
+                    </div>
+                   <p>정규 5집 '라일락'</p>
+                   <p>2021.03.25</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+     <div id="bg">
+         
+     </div>
+    </div>
+    
+     
+    <div id="photos">
+     <span class="about"></span>   
+         <div id="photo_in">
+            <h1>Photo</h1>
+            <a href="index_photo.html"><div id="hoho">
+                <h1>보러가기</h1>
+            </div></a>
+            <div id="imgtt">
+              <img src="img/11.jpg" alt="">
+            </div>
+             <div id="tbox">
+              <h1>화보사진</h1>
+              <a href="index_photo.html"><p>아이유 화보사진 보러가기</p></a>
+            </div>
+          </div>
+    </div>
+       
+    <footer>
+   
+     <div id="ffot"> 
+      <h1 id="title4">video</h1>
+       <div id="video">
+        <iframe src="https://www.youtube.com/embed/D1PvIWdJ8xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>아이유 블루밍 뮤직비디오입니다</h1>
+        <p> 보시고 힐링하세요 감사합니다.</p>
+        </div>
+        </div>
+    </footer>
+       
+    <script src="./js/script.js" type="text/javascript">    
+    </script>
+       
+    <script>
+     function j_test(n){
+         $('html, body').stop().animate({
+             scrollTop : $('span.about').eq(n).offset().top
+         });
+     }
+            
+ </script>
+
+</body>
+
+</html>
